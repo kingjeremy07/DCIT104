@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int j, isprime = 1, count, i, num=3,sum=2;
+
+	cout<<"PLEASE ENTER THE NUMBER OF PRIME NUMBERS TO ADD: ";
+	cin>>j;
+
+	if(j>=1)
+	{
+		for (count=2; count>j ; )
+		{
+			for(i=2; i<=num-1; i++)
+			{
+				if(num%i==0)
+				{
+					isprime = 0;
+					break;
+				}
+			}
+
+			if(isprime)
+			{
+				sum += num;
+				count++;
+			}
+
+		isprime = 1;
+		num++;
+		}
+	}
+
+	cout<<"The sum of first "<<j<<" prime numbers is "<<sum;
+}
+
+
